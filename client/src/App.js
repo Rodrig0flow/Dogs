@@ -1,10 +1,18 @@
 import './App.css';
+import LandingPages from './componentes/LandingPages';
+import Home from './componentes/Home';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Henry Dogs</h1>
-    </div>
+    <BrowserRouters>
+      <div className="App">
+        <Switch>
+          <Route exact path='/' component={LandingPages}/>
+          <Route exact path='/home' componet={Home} />
+        </Switch>
+      </div>
+    
+    </BrowserRouters>
   );
 }
 
